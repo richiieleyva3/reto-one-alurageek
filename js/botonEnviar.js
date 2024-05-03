@@ -29,6 +29,9 @@ const botonEnviarFormulario = formulario.addEventListener('submit', (event) => {
         campoPrecio.value = '';
         campoImagen.value = '';
     });
+
+    event.preventDefault();
 });
 
 export { botonEnviarFormulario, botonEnviarFormularioClick };
+

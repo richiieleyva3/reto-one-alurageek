@@ -4,7 +4,7 @@ async function postAPI(producto) {
         location.reload();
         return response.data;
     } catch (error) {
-        console.error('Error:', error);
+        console.error('Error occurred while posting data:', error);
         throw error;
     }
 }
