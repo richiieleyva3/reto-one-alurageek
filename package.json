@@ -1,0 +1,24 @@
+{
+  "name": "reto-one-alurageek",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "json-server --watch ./bd/db.json --port 5051"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/richiieleyva3/reto-one-alurageek.git"
+  },
+  "author": "Ricardo Leyva Bueno",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/richiieleyva3/reto-one-alurageek/issues"
+  },
+  "homepage": "https://github.com/richiieleyva3/reto-one-alurageek#readme",
+  "dependencies": {
+    "axios": "^1.6.8",
+    "json-server": "^1.0.0-alpha.23"
+  }
+}

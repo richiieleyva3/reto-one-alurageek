@@ -12,6 +12,7 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
     />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   </head>
   <body>
     <header>
@@ -63,6 +64,7 @@
                 ¡Mis productos!
             </div>
             <div class="lista-productos">
+                <!--
                 <div class="producto">
                     <div class="producto-imagen"></div>
                     <div class="producto-nombre font-player">Game Boy Classic</div>
@@ -71,67 +73,31 @@
                         <div class="producto-icono-borrar"><i class="bi bi-trash-fill"></i></div>
                     </div>
                 </div>
-                <div class="producto">
-                    <div class="producto-imagen"></div>
-                    <div class="producto-nombre font-player">Game Boy Classic</div>
-                    <div class="producto-barra-inferior">
-                        <div class="producto-precio font-player">$60.00</div>
-                        <div class="producto-icono-borrar"><i class="bi bi-trash-fill"></i></div>
-                    </div>  
-                </div>
-                <div class="producto">
-                    <div class="producto-imagen"></div>
-                    <div class="producto-nombre font-player">Game Boy Classic</div>
-                    <div class="producto-barra-inferior">
-                        <div class="producto-precio font-player">$60.00</div>
-                        <div class="producto-icono-borrar"><i class="bi bi-trash-fill"></i></div>
-                    </div>  
-                </div>
-                <div class="producto">
-                    <div class="producto-imagen"></div>
-                    <div class="producto-nombre font-player">Game Boy Classic</div>
-                    <div class="producto-barra-inferior">
-                        <div class="producto-precio font-player">$60.00</div>
-                        <div class="producto-icono-borrar"><i class="bi bi-trash-fill"></i></div>
-                    </div>  
-                </div>
-                <div class="producto">
-                    <div class="producto-imagen"></div>
-                    <div class="producto-nombre font-player">Game Boy Classic</div>
-                    <div class="producto-barra-inferior">
-                        <div class="producto-precio font-player">$60.00</div>
-                        <div class="producto-icono-borrar"><i class="bi bi-trash-fill"></i></div>
-                    </div>  
-                </div>
-                <div class="producto">
-                    <div class="producto-imagen"></div>
-                    <div class="producto-nombre font-player">Game Boy Classic</div>
-                    <div class="producto-barra-inferior">
-                        <div class="producto-precio font-player">$60.00</div>
-                        <div class="producto-icono-borrar"><i class="bi bi-trash-fill"></i></div>
-                    </div>  
-                </div>
+                -->
             </div>
         </div>
         <div class="formulario">
             <div class="titulo-formulario font-player">
                 ¡Agregar un producto!
             </div>
-            <div class="formulario-form">
+            <form id="formulario" class="formulario-form">
                 <div class="formulario-campo">
-                    <input placeholder="nombre..." />
+                    <input id="campo-nombre" name="nombre" placeholder="nombre..." minlength="3" type="text" required />
+                    <div class="hint hint-nombre">El nombre requiere un texto de mínimo 3 caracteres.</div>
                 </div>
                 <div class="formulario-campo">
-                    <input placeholder="precio..." />
+                    <input id="campo-precio" name="precio" placeholder="precio..." minlength="1" type="number" required />
+                    <div class="hint hint-precio">El precio requiere un número de mínimo 1 carácter.</div>
                 </div>
                 <div class="formulario-campo">
-                    <input placeholder="imagen..." />
+                    <input id="campo-imagen" name="imagen" placeholder="imagen..." pattern="(http|https)?://.+" type="text" required />
+                    <div class="hint hint-imagen">La imagen requiere una url valida.</div>
                 </div>
                 <div class="formulario-botones">
-                    <div class="boton enviar">Enviar</div>
-                    <div class="boton limpiar">Limpiar</div>
+                    <button id="btn-enviar" class="boton enviar">Enviar</button>
+                    <div id="btn-limpiar" class="boton limpiar">Limpiar</div>
                 </div>
-            </div>
+              </form>
         </div>
     </main>
     <footer>
@@ -180,5 +146,6 @@
             DESARROLLADO POR RICARDO LEYVA BUENO
         </div>
     </footer>
+    <script src="index.js" type="module"></script>
   </body>
 </html>

@@ -222,10 +222,20 @@ main{
     background-color: black;
 }
 
+.producto-imagen img{
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+}
+
 .producto-barra-inferior{
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.producto-id{
+    display: none;
 }
 
 .producto-nombre{
@@ -261,6 +271,42 @@ main{
     gap: 20px;
     width: 100%;
     margin: 20px auto;
+}
+
+.formulario-campo{
+    position: relative;
+    display: inline-block;
+}
+
+.hint {
+    visibility: hidden;
+    background-color: var(--var-color-geek);
+    opacity: 0.9;
+    border-radius: 10px;
+    color: white;
+    position: absolute;
+    display: flex;
+    font-weight: bold;
+    justify-content: center;
+    align-items: center;
+    top: -17px;
+    width: 100%;
+    font-size: 10px;
+    height: 15px;
+    z-index: 5;
+    text-align: center;
+}
+
+#campo-nombre:focus + .hint-nombre {
+    visibility: visible;
+}
+
+#campo-precio:focus + .hint-precio {
+    visibility: visible;
+}
+
+#campo-imagen:focus + .hint-imagen {
+    visibility: visible;
 }
 
 .formulario input{
@@ -300,6 +346,23 @@ main{
 .limpiar{
     background-color: transparent;
     color: var(--var-color-geek);
+}
+
+form:invalid button {
+    opacity: 0.3;
+    pointer-events: none;
+  }
+
+.invalido input {
+    border: 2px solid red !important;
+}
+
+.invalido input:invalid {
+    border: 2px solid red !important;
+}
+
+.invalido input:active {
+    border: 2px solid red !important;
 }
 
 /* Estilos del pie de pagina */
@@ -472,17 +535,32 @@ footer .bi-heart-fill .bi-heart-fill-ab-m{
 /* Estilos del telefonos */
 
 @media (max-width: 1000px){
+
+    .body{
+        height: auto;
+    }
+
     main{
-        flex-direction: column;
+        flex-direction: column-reverse;
         justify-content: start;
-        height: 185vh;
+        height: auto;
+        overflow: none;
     }
 
     .productos{
-        width: 100%;
+        height: auto;
     }
 
-    .formulario{
-        width: 100%;
+    .lista-productos{
+        height: auto;
+        margin-bottom: 100px;
     }
+}
+
+.productos{
+    width: 100%;
+}
+
+.formulario{
+    width: 100%;
 }
